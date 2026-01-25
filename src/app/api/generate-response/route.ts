@@ -82,8 +82,8 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Check for API key
-    if (!process.env.ANTHROPIC_API_KEY) {
+    // Check for API key (supports both BYOK and ANTHROPIC_API_KEY)
+    if (!process.env.BYOK && !process.env.ANTHROPIC_API_KEY) {
       return NextResponse.json(
         { error: 'Configuration error', message: 'API key not configured.' },
         { status: 500 }

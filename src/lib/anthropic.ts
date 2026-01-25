@@ -3,7 +3,7 @@ import { PerspectiveId } from './types';
 import { getPromptByPerspective, getPerspectiveById } from './prompts';
 
 const anthropic = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY,
+  apiKey: process.env.BYOK || process.env.ANTHROPIC_API_KEY,
 });
 
 export async function generatePerspectiveResponse(
