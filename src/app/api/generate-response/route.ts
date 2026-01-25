@@ -110,18 +110,32 @@ export async function POST(request: NextRequest) {
     
     // Handle Anthropic API errors
     if (error instanceof Error) {
-      if (error.message.includes('API key')) {
+      const errorMessage = error.message.toLowerCase();
+      
+      if (errorMessage.includes('api key') || errorMessage.includes('authentication') || errorMessage.includes('unauthorized')) {
         return NextResponse.json(
-          { error: 'Authentication error', message: 'Invalid API configuration.' },
+          { error: 'Authentication error', message: 'Invalid API configuration. Please check the API key.' },
           { status: 500 }
         );
       }
-      if (error.message.includes('rate limit')) {
+      if (errorMessage.includes('rate limit')) {
         return NextResponse.json(
           { error: 'Service busy', message: 'AI service is busy. Please try again in a moment.' },
           { status: 503 }
         );
       }
+      if (errorMessage.includes('insufficient') || errorMessage.includes('credit') || errorMessage.includes('balance')) {
+        return NextResponse.json(
+          { error: 'Service unavailable', message: 'AI service quota exceeded. Please try again later.' },
+          { status: 503 }
+        );
+      }
+      
+      // Return the actual error message for debugging
+      return NextResponse.json(
+        { error: 'Server error', message: error.message },
+        { status: 500 }
+      );
     }
 
     return NextResponse.json(
