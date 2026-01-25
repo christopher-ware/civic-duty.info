@@ -166,7 +166,7 @@ export default function SpectrumSelector({
         </div>
         <div className="flex items-center gap-2">
           <div className="w-4 h-4 rounded-full bg-gray-600" />
-          <span className="text-sm text-gray-600">Cynical</span>
+          <span className="text-sm text-gray-600">Black American Skeptic</span>
         </div>
       </div>
 

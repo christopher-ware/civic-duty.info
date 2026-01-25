@@ -133,30 +133,30 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* Cynical Spectrum */}
+            {/* Black American Skeptic Spectrum */}
             <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200">
               <div className="w-12 h-12 rounded-full bg-gray-600 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900">Cynical</h3>
+              <h3 className="text-xl font-semibold text-gray-900">Black American Skeptic</h3>
               <p className="mt-2 text-gray-700">
-                The disengaged perspective. Explore institutional distrust, both-sides criticism, 
-                and &quot;nothing ever changes&quot; viewpoints.
+                A critically analytical perspective rooted in historical experience. Examines policies 
+                through the lens of documented exploitation and earned institutional distrust.
               </p>
               <ul className="mt-4 space-y-2 text-sm text-gray-800">
                 <li className="flex items-center">
                   <span className="w-2 h-2 rounded-full bg-gray-500 mr-2" />
-                  Institutional distrust
+                  Historical awareness
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 rounded-full bg-gray-500 mr-2" />
-                  Both-sides criticism
+                  Earned institutional distrust
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 rounded-full bg-gray-500 mr-2" />
-                  Political disillusionment
+                  Community protection focus
                 </li>
               </ul>
             </div>
